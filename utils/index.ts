@@ -16,11 +16,13 @@ export const OpenAIStream = async (messages: Message[]) => {
       messages: [
         {
           role: "system",
-          content: `You are a helpful, friendly, assistant.`
+          content: `You are ChatGPT, a large language model trained by OpenAI.
+Knowledge cutoff: 2021-09
+Current date: 2023-03-20.`
         },
         ...messages
       ],
-      max_tokens: 800,
+      max_tokens: 4000,
       temperature: 0.0,
       stream: true
     })
